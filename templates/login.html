@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPINION.AI - Login</title>
+
+    <!-- ✅ Static CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <div class="form-page">
+
+        <div class="card form-panel">
+            <h1>Sign In</h1>
+            <p>Access the dashboard and review results.</p>
+
+            <!-- ✅ Static login form -->
+            <form onsubmit="handleLogin(event)">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <button class="btn-primary" type="submit">Login</button>
+                </div>
+            </form>
+
+            <!-- ✅ Navigation -->
+            <div class="form-links">
+                <a class="inline-link" href="review.html">Back to Review Page</a>
+            </div>
+        </div>
+
+        <div class="card info-panel">
+            <h2>Dashboard Access</h2>
+            <p>
+                Authorized users can monitor review analysis results from this page.
+            </p>
+
+            <ul>
+                <li>View category summary.</li>
+                <li>View opinion distribution.</li>
+                <li>Check full review analysis table.</li>
+                <li>Log out safely after use.</li>
+            </ul>
+
+            <p class="muted">
+                This demo uses a simplified login system.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- ✅ JavaScript login handler -->
+<script>
+function handleLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // ✅ Simple demo login
+    if (email && password) {
+        // Save login state locally
+        localStorage.setItem("loggedIn", "true");
+
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
+    }
+}
+</script>
+
+</body>
+</html>

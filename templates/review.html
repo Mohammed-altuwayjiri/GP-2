@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPINION.AI - Submit Review</title>
+
+    <!-- ✅ Static stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <div class="form-page">
+
+        <div class="card form-panel">
+            <h1>Submit Your Review</h1>
+            <p>
+                Share your experience with the restaurant.
+                Your review will be analyzed automatically.
+            </p>
+
+            <!-- ✅ Form -->
+            <form onsubmit="sendReview(event)">
+
+                <!-- ✅ Success message ABOVE textbox -->
+                <div id="result" style="margin-bottom:10px; font-weight:bold; color:black;"></div>
+
+                <div class="form-group">
+                    <label for="text">Review Text</label>
+                    <textarea
+                        id="text"
+                        name="text"
+                        placeholder="Write your review here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="stars">Stars</label>
+                    <select id="stars" name="stars" required>
+                        <option value="">Select rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn-primary" type="submit">Submit Review</button>
+                </div>
+            </form>
+
+            <!-- ✅ Navigation -->
+            <div class="form-links">
+                <a class="inline-link" href="login.html">Admin / Owner Login</a>
+            </div>
+        </div>
+
+        <div class="card info-panel">
+            <h2>How it works</h2>
+            <p>
+                The system stores your review, analyzes it, and sends the result to the dashboard.
+            </p>
+
+            <ul>
+                <li>Write a short review.</li>
+                <li>Select a rating from 1 to 5.</li>
+                <li>The system predicts category and opinion.</li>
+                <li>Results appear in the dashboard.</li>
+            </ul>
+
+            <p class="muted">
+                Example categories: Food Quality, Cleanliness, Staff Behavior, and Price.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- ✅ JavaScript -->
+<script>
+function sendReview(event) {
+    event.preventDefault();
+
+    const review = document.getElementById("text").value;
+    const stars = document.getElementById("stars").value;
+
+    fetch("https://z1wqrbpzn8.execute-api.eu-north-1.amazonaws.com/analyze", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            review: review,
+            stars: stars
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        // ✅ Clean message (above textbox)
+        document.getElementById("result").innerHTML =
+            "Review analyzed successfully";
+
+        // ✅ Clear inputs
+        document.getElementById("text").value = "";
+        document.getElementById("stars").value = "";
+
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+        document.getElementById("result").innerHTML =
+            "<span style='color:black;'>Error sending review</span>";
+    });
+}
+</script>
+
+</body>
+</html>
+``

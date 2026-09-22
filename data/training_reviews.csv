@@ -1,0 +1,440 @@
+text,category,opinion
+الأكل كان لذيذ جدا,Food Quality,positive
+الطعام شهي وطازج,Food Quality,positive
+طعم الوجبة ممتاز,Food Quality,positive
+الأكل كان رائع اليوم,Food Quality,positive
+الطعام عادي,Food Quality,neutral
+مذاق الأكل مقبول,Food Quality,neutral
+الوجبة كانت عادية,Food Quality,neutral
+الطعم لا بأس به,Food Quality,neutral
+الأكل كان سيئا,Food Quality,negative
+الطعام بارد وغير جيد,Food Quality,negative
+طعم الوجبة غير مستساغ,Food Quality,negative
+الأكل غير طازج,Food Quality,negative
+المكان نظيف جدا,Cleanliness,positive
+المطعم مرتب ونظيف,Cleanliness,positive
+الطاولات كانت نظيفة,Cleanliness,positive
+النظافة ممتازة في المكان,Cleanliness,positive
+النظافة عادية,Cleanliness,neutral
+المكان مقبول من ناحية النظافة,Cleanliness,neutral
+المطعم نظيف بشكل متوسط,Cleanliness,neutral
+وضع النظافة لا بأس به,Cleanliness,neutral
+الطاولات كانت متسخة,Cleanliness,negative
+المكان غير نظيف,Cleanliness,negative
+المطعم كان متسخا,Cleanliness,negative
+النظافة سيئة جدا,Cleanliness,negative
+الموظفون محترمون,Staff Behavior,positive
+تعامل العاملين ممتاز,Staff Behavior,positive
+الخدمة كانت ودودة,Staff Behavior,positive
+الموظف كان متعاونا جدا,Staff Behavior,positive
+تعامل الموظفين عادي,Staff Behavior,neutral
+الخدمة كانت عادية,Staff Behavior,neutral
+الموظف كان مقبولا,Staff Behavior,neutral
+أسلوب العاملين لا بأس به,Staff Behavior,neutral
+الموظفون غير محترمين,Staff Behavior,negative
+تعامل العاملين سيئ,Staff Behavior,negative
+الخدمة كانت مزعجة,Staff Behavior,negative
+الموظف كان وقحا,Staff Behavior,negative
+الأسعار مناسبة,Price,positive
+السعر جيد مقابل الوجبة,Price,positive
+الأسعار معقولة,Price,positive
+قيمة الوجبة ممتازة مقابل السعر,Price,positive
+الأسعار مقبولة,Price,neutral
+السعر عادي,Price,neutral
+الأسعار متوسطة,Price,neutral
+السعر لا بأس به,Price,neutral
+الأسعار مرتفعة جدا,Price,negative
+السعر مبالغ فيه,Price,negative
+الوجبة غالية مقارنة بحجمها,Price,negative
+الأسعار غير مناسبة,Price,negative
+الأكل كان لذيذا جدا,Food Quality,positive
+الطعام شهي وطازج,Food Quality,positive
+طعم الوجبة ممتاز,Food Quality,positive
+الأكل اليوم رائع,Food Quality,positive
+الطبق طعمه جميل,Food Quality,positive
+الوجبة كانت شهية,Food Quality,positive
+المذاق ممتاز جدا,Food Quality,positive
+الأكل طعمه مضبوط,Food Quality,positive
+الطعام لذيذ ومتوازن,Food Quality,positive
+الساندويتش كان شهي,Food Quality,positive
+الطبق طازج ولذيذ,Food Quality,positive
+نكهة الأكل ممتازة,Food Quality,positive
+الوجبة أعجبتني جدا,Food Quality,positive
+الطعام جودته عالية,Food Quality,positive
+الطبق كان ممتاز الطعم,Food Quality,positive
+الأكل مره لذيذ,Food Quality,positive
+الطعم رائع بشكل واضح,Food Quality,positive
+الوجبة كانت ممتازة جدا,Food Quality,positive
+الأكل جاء ساخنا ولذيذا,Food Quality,positive
+الطعام كان نظيفا ولذيذا,Food Quality,positive
+الأكل كان عاديا,Food Quality,neutral
+الطعام مقبول,Food Quality,neutral
+طعم الوجبة لا بأس به,Food Quality,neutral
+الأكل متوسط,Food Quality,neutral
+المذاق عادي,Food Quality,neutral
+الوجبة كانت مقبولة,Food Quality,neutral
+الطعم ليس سيئا وليس ممتازا,Food Quality,neutral
+الأكل مقبول إلى حد ما,Food Quality,neutral
+الطبق عادي جدا,Food Quality,neutral
+الوجبة متوسطة الطعم,Food Quality,neutral
+الطعام لا بأس به,Food Quality,neutral
+المذاق متوسط,Food Quality,neutral
+الأكل عادي اليوم,Food Quality,neutral
+الطبق مقبول,Food Quality,neutral
+الطعام بطعم عادي,Food Quality,neutral
+الوجبة ليست مميزة,Food Quality,neutral
+الأكل على قد المستوى,Food Quality,neutral
+الطعم متوسط جدا,Food Quality,neutral
+الوجبة لا تقدم شيئا مميزا,Food Quality,neutral
+الطعام في المستوى المتوسط,Food Quality,neutral
+الأكل كان سيئا,Food Quality,negative
+الطعام بارد وغير جيد,Food Quality,negative
+طعم الوجبة غير مستساغ,Food Quality,negative
+الأكل غير طازج,Food Quality,negative
+الطبق طعمه سيئ,Food Quality,negative
+الوجبة كانت سيئة جدا,Food Quality,negative
+المذاق مزعج,Food Quality,negative
+الأكل محروق,Food Quality,negative
+الطعام مالح زيادة,Food Quality,negative
+الوجبة بدون نكهة,Food Quality,negative
+الطعم رديء,Food Quality,negative
+الأكل جاء باردا,Food Quality,negative
+جودة الطعام ضعيفة,Food Quality,negative
+الطبق غير لذيذ إطلاقا,Food Quality,negative
+الأكل مو زين,Food Quality,negative
+النكهة سيئة جدا,Food Quality,negative
+الوجبة غير مقبولة,Food Quality,negative
+الأكل طعمه غريب وسيئ,Food Quality,negative
+الطعام قديم وغير طازج,Food Quality,negative
+الوجبة كانت مخيبة جدا,Food Quality,negative
+المكان نظيف جدا,Cleanliness,positive
+المطعم مرتب ونظيف,Cleanliness,positive
+الطاولات كانت نظيفة,Cleanliness,positive
+النظافة ممتازة في المكان,Cleanliness,positive
+الأرضية نظيفة,Cleanliness,positive
+الصالة مرتبة جدا,Cleanliness,positive
+المكان واضح أنه نظيف,Cleanliness,positive
+المطعم لامع ومرتب,Cleanliness,positive
+النظافة عالية جدا,Cleanliness,positive
+الحمام كان نظيفا,Cleanliness,positive
+المكان مرتب بشكل ممتاز,Cleanliness,positive
+الكراسي والطاولات نظيفة,Cleanliness,positive
+المطعم محافظ على النظافة,Cleanliness,positive
+الصالة نظيفة ومريحة,Cleanliness,positive
+المكان نظيف ومرتب,Cleanliness,positive
+النظافة ممتازة جدا,Cleanliness,positive
+الطاولات تلمع من النظافة,Cleanliness,positive
+المطعم نظيف مره,Cleanliness,positive
+المكان خال من الأوساخ,Cleanliness,positive
+المحل مرتب ونظيف,Cleanliness,positive
+النظافة عادية,Cleanliness,neutral
+المكان مقبول من ناحية النظافة,Cleanliness,neutral
+المطعم نظيف بشكل متوسط,Cleanliness,neutral
+وضع النظافة لا بأس به,Cleanliness,neutral
+النظافة مقبولة,Cleanliness,neutral
+المكان ليس متسخا وليس نظيفا جدا,Cleanliness,neutral
+النظافة متوسطة,Cleanliness,neutral
+المطعم في مستوى نظافة عادي,Cleanliness,neutral
+الطاولات مقبولة,Cleanliness,neutral
+الصالة عادية من ناحية النظافة,Cleanliness,neutral
+النظافة ليست مثالية,Cleanliness,neutral
+المكان متوسط النظافة,Cleanliness,neutral
+النظافة على قد الحال,Cleanliness,neutral
+المطعم مقبول نظافة,Cleanliness,neutral
+الوضع العام مقبول,Cleanliness,neutral
+المكان يحتاج عناية بسيطة فقط,Cleanliness,neutral
+النظافة ليست سيئة لكنها ليست ممتازة,Cleanliness,neutral
+الحمام كان مقبولا,Cleanliness,neutral
+الطاولات ليست لامعة لكنها ليست متسخة,Cleanliness,neutral
+المكان لا بأس به عموما,Cleanliness,neutral
+الطاولات كانت متسخة,Cleanliness,negative
+المكان غير نظيف,Cleanliness,negative
+المطعم كان متسخا,Cleanliness,negative
+النظافة سيئة جدا,Cleanliness,negative
+الأرضية كانت وسخة,Cleanliness,negative
+الصالة غير مرتبة,Cleanliness,negative
+المكان فيه أوساخ واضحة,Cleanliness,negative
+الطاولات عليها بقايا أكل,Cleanliness,negative
+الحمام غير نظيف,Cleanliness,negative
+المحل متسخ بشكل مزعج,Cleanliness,negative
+النظافة ضعيفة جدا,Cleanliness,negative
+المكان يحتاج تنظيف,Cleanliness,negative
+المطعم وسخ,Cleanliness,negative
+الوضع من ناحية النظافة سيئ,Cleanliness,negative
+الروائح تدل على قلة النظافة,Cleanliness,negative
+الكراسي والطاولات متسخة,Cleanliness,negative
+النظافة تحت المستوى,Cleanliness,negative
+الصالة غير نظيفة إطلاقا,Cleanliness,negative
+المكان غير مرتب ومتسخ,Cleanliness,negative
+هناك أوساخ كثيرة في المكان,Cleanliness,negative
+الموظفون محترمون,Staff Behavior,positive
+تعامل العاملين ممتاز,Staff Behavior,positive
+الخدمة كانت ودودة,Staff Behavior,positive
+الموظف كان متعاونا جدا,Staff Behavior,positive
+النادل بشوش ومحترم,Staff Behavior,positive
+الكاشير لطيف جدا,Staff Behavior,positive
+فريق الخدمة سريع ومحترم,Staff Behavior,positive
+أسلوب الموظفين رائع,Staff Behavior,positive
+الموظفون يساعدون بسرعة,Staff Behavior,positive
+التعامل كان راقيا,Staff Behavior,positive
+العامل محترم ومتعاون,Staff Behavior,positive
+الطاقم جدا محترف,Staff Behavior,positive
+الخدمة ممتازة من الموظفين,Staff Behavior,positive
+الموظفون تعاملهم جميل,Staff Behavior,positive
+الاستقبال كان ممتازا,Staff Behavior,positive
+الموظفون مره محترمين,Staff Behavior,positive
+الطاقم كان بشوشا طوال الوقت,Staff Behavior,positive
+الموظف رد باحترام,Staff Behavior,positive
+العاملين متعاونون جدا,Staff Behavior,positive
+أسلوب الكاشير ممتاز,Staff Behavior,positive
+تعامل الموظفين عادي,Staff Behavior,neutral
+الخدمة كانت عادية,Staff Behavior,neutral
+الموظف كان مقبولا,Staff Behavior,neutral
+أسلوب العاملين لا بأس به,Staff Behavior,neutral
+الاستقبال كان عاديا,Staff Behavior,neutral
+تعامل الكاشير طبيعي,Staff Behavior,neutral
+الموظفون متوسطون في التعامل,Staff Behavior,neutral
+الخدمة لا بأس بها,Staff Behavior,neutral
+أسلوب الموظفين مقبول,Staff Behavior,neutral
+التعامل طبيعي جدا,Staff Behavior,neutral
+الموظف لم يكن سيئا ولا ممتازا,Staff Behavior,neutral
+الخدمة في المستوى العادي,Staff Behavior,neutral
+العامل كان عاديا,Staff Behavior,neutral
+الاستقبال مقبول,Staff Behavior,neutral
+تعامل الطاقم متوسط,Staff Behavior,neutral
+الموظفون على قد الواجب,Staff Behavior,neutral
+الخدمة ليست مميزة,Staff Behavior,neutral
+أسلوبهم عادي جدا,Staff Behavior,neutral
+الكاشير كان محايدا في التعامل,Staff Behavior,neutral
+الردود كانت طبيعية,Staff Behavior,neutral
+الموظفون غير محترمين,Staff Behavior,negative
+تعامل العاملين سيئ,Staff Behavior,negative
+الخدمة كانت مزعجة,Staff Behavior,negative
+الموظف كان وقحا,Staff Behavior,negative
+الكاشير رد بطريقة سيئة,Staff Behavior,negative
+الطاقم غير متعاون,Staff Behavior,negative
+أسلوب الموظفين سيئ جدا,Staff Behavior,negative
+الموظفون يتعاملون بجفاف,Staff Behavior,negative
+الاستقبال كان سيئا,Staff Behavior,negative
+العامل كان غير مهذب,Staff Behavior,negative
+الخدمة غير مريحة,Staff Behavior,negative
+الموظفون يرفعون صوتهم,Staff Behavior,negative
+الرد كان مستفزا,Staff Behavior,negative
+التعامل غير احترافي,Staff Behavior,negative
+الموظفون مو محترمين,Staff Behavior,negative
+العامل تجاهل الطلب,Staff Behavior,negative
+أسلوب الكاشير مزعج,Staff Behavior,negative
+الطاقم سيئ في التعامل,Staff Behavior,negative
+الخدمة تعاملها بارد وسيئ,Staff Behavior,negative
+التعامل كان مخيبا,Staff Behavior,negative
+الأسعار مناسبة,Price,positive
+السعر جيد مقابل الوجبة,Price,positive
+الأسعار معقولة,Price,positive
+قيمة الوجبة ممتازة مقابل السعر,Price,positive
+السعر يستحق الجودة,Price,positive
+الأسعار ممتازة جدا,Price,positive
+السعر مناسب جدا,Price,positive
+الوجبة تستحق ما دفعته,Price,positive
+السعر جميل مقابل الخدمة,Price,positive
+الأسعار مرضية,Price,positive
+قيمة الأكل ممتازة,Price,positive
+السعر اقتصادي,Price,positive
+الأسعار مناسبة للجميع,Price,positive
+التكلفة معقولة جدا,Price,positive
+السعر منخفض بشكل جيد,Price,positive
+الأسعار مره مناسبة,Price,positive
+السعر مناسب مقارنة بالمكان,Price,positive
+المبلغ المدفوع منطقي,Price,positive
+الأسعار جيدة جدا,Price,positive
+القيمة مقابل السعر رائعة,Price,positive
+الأسعار مقبولة,Price,neutral
+السعر عادي,Price,neutral
+الأسعار متوسطة,Price,neutral
+السعر لا بأس به,Price,neutral
+التكلفة مقبولة,Price,neutral
+السعر في المستوى المتوسط,Price,neutral
+الأسعار ليست رخيصة وليست غالية,Price,neutral
+السعر مناسب إلى حد ما,Price,neutral
+الأسعار عادية,Price,neutral
+المبلغ مقبول,Price,neutral
+السعر متوسط,Price,neutral
+التكلفة عادية,Price,neutral
+الأسعار على قد السوق,Price,neutral
+السعر ليس مميزا,Price,neutral
+القيمة متوسطة,Price,neutral
+الأسعار ليست سيئة,Price,neutral
+المبلغ لا بأس به,Price,neutral
+السعر مقبول نسبيا,Price,neutral
+التكلفة ليست مرتفعة كثيرا,Price,neutral
+الأسعار ضمن المتوسط,Price,neutral
+الأسعار مرتفعة جدا,Price,negative
+السعر مبالغ فيه,Price,negative
+الوجبة غالية مقارنة بحجمها,Price,negative
+الأسعار غير مناسبة,Price,negative
+السعر أعلى من المتوقع,Price,negative
+التكلفة مرتفعة جدا,Price,negative
+الأسعار غالية,Price,negative
+المبلغ لا يستحق,Price,negative
+السعر مبالغ فيه جدا,Price,negative
+قيمة الوجبة لا تبرر السعر,Price,negative
+الأسعار نار,Price,negative
+الأسعار فوق المعقول,Price,negative
+السعر مرتفع بلا سبب,Price,negative
+التكلفة عالية على الجودة,Price,negative
+الوجبة صغيرة وسعرها غال,Price,negative
+الأسعار مو مناسبة,Price,negative
+السعر صادم,Price,negative
+الأسعار أكثر من اللازم,Price,negative
+المبلغ المدفوع كبير جدا,Price,negative
+التكلفة غير منطقية,Price,negative
+الأكل ممتاز جدا,Food Quality,positive
+الوجبة كانت شهية,Food Quality,positive
+الطعام لذيذ وساخن,Food Quality,positive
+الأكل جيد وممتع,Food Quality,positive
+النكهة جميلة,Food Quality,positive
+الطعام مقبول نوعا ما,Food Quality,neutral
+الوجبة ليست سيئة,Food Quality,neutral
+الطعام متوسط المستوى,Food Quality,neutral
+المذاق عادي جدا,Food Quality,neutral
+الطعم ليس مميزا,Food Quality,neutral
+الطعام سيئ جدا,Food Quality,negative
+الأكل بلا نكهة,Food Quality,negative
+الوجبة طعمها مزعج,Food Quality,negative
+الطعام غير ناضج,Food Quality,negative
+المذاق سيئ للغاية,Food Quality,negative
+المكان نظيف ومرتب, Cleanliness,positive
+القاعة نظيفة جدا, Cleanliness,positive
+المطعم لامع ونظيف, Cleanliness,positive
+الأرضية نظيفة, Cleanliness,positive
+دورات المياه نظيفة, Cleanliness,positive
+النظافة مقبولة, Cleanliness,neutral
+المكان ليس سيئا من ناحية النظافة, Cleanliness,neutral
+النظافة متوسطة, Cleanliness,neutral
+الوضع العام عادي, Cleanliness,neutral
+المكان مقبول, Cleanliness,neutral
+المكان وسخ, Cleanliness,negative
+الأرضية متسخة, Cleanliness,negative
+الطاولات غير نظيفة, Cleanliness,negative
+رائحة المكان سيئة, Cleanliness,negative
+المطعم مهمل جدا, Cleanliness,negative
+الموظفون ودودون,Staff Behavior,positive
+الخدمة رائعة,Staff Behavior,positive
+التعامل محترم جدا,Staff Behavior,positive
+الطاقم متعاون,Staff Behavior,positive
+الموظف لطيف,Staff Behavior,positive
+تعامل الموظفين متوسط,Staff Behavior,neutral
+الخدمة ليست سيئة,Staff Behavior,neutral
+الرد كان عاديا,Staff Behavior,neutral
+الطاقم مقبول,Staff Behavior,neutral
+الموظف لم يكن مميزا,Staff Behavior,neutral
+الموظفون سيئون,Staff Behavior,negative
+التعامل غير محترم,Staff Behavior,negative
+الخدمة سيئة جدا,Staff Behavior,negative
+الموظف مستفز,Staff Behavior,negative
+العامل كان فظا,Staff Behavior,negative
+السعر مناسب جدا,Price,positive
+الأسعار ممتازة,Price,positive
+القيمة مقابل السعر جيدة,Price,positive
+السعر معقول جدا,Price,positive
+الوجبة تستحق السعر,Price,positive
+السعر مقبول نوعا ما,Price,neutral
+الأسعار ليست رخيصة ولا غالية,Price,neutral
+السعر متوسط,Price,neutral
+التكلفة عادية,Price,neutral
+الأسعار لا بأس بها,Price,neutral
+السعر مرتفع,Price,negative
+الأسعار مبالغ فيها جدا,Price,negative
+التكلفة عالية,Price,negative
+السعر غير منطقي,Price,negative
+القيمة لا تستحق السعر,Price,negative
+الأكل جيد لكنه ليس مميزا,Food Quality,neutral
+الطعام ليس سيئا لكنه عادي,Food Quality,neutral
+الوجبة مقبولة لكني توقعت أفضل,Food Quality,neutral
+الطعم جيد إلى حد ما,Food Quality,neutral
+الأكل لا بأس به لكنه ليس ممتازا,Food Quality,neutral
+الوجبة أقل من المتوقع,Food Quality,negative
+الطعام ليس جيدا كما ظننت,Food Quality,negative
+النكهة ضعيفة جدا,Food Quality,negative
+الأكل جيد فعلا,Food Quality,positive
+الوجبة كانت أفضل من المتوقع,Food Quality,positive
+الطعام لذيذ بشكل واضح,Food Quality,positive
+الطعم ممتاز فعلا,Food Quality,positive
+المكان نظيف لكن يحتاج عناية أكثر,Cleanliness,neutral
+النظافة جيدة إلى حد ما,Cleanliness,neutral
+المطعم ليس متسخا لكنه ليس نظيفا تماما,Cleanliness,neutral
+الوضع العام مقبول من ناحية النظافة,Cleanliness,neutral
+المكان يحتاج تنظيفا أفضل,Cleanliness,negative
+النظافة أقل من المتوقع,Cleanliness,negative
+المطعم غير مرتب بشكل واضح,Cleanliness,negative
+المكان نظيف جدا ومرتب,Cleanliness,positive
+النظافة ممتازة فعلا,Cleanliness,positive
+الطاولات نظيفة بشكل واضح,Cleanliness,positive
+الخدمة جيدة لكن بطيئة قليلا,Staff Behavior,neutral
+تعامل الموظفين مقبول لكنه ليس ممتازا,Staff Behavior,neutral
+الموظف لم يكن سيئا لكنه غير مهتم,Staff Behavior,neutral
+الخدمة عادية جدا,Staff Behavior,neutral
+تعامل الموظفين أقل من المتوقع,Staff Behavior,negative
+الموظف لم يكن محترما كفاية,Staff Behavior,negative
+الخدمة مزعجة بصراحة,Staff Behavior,negative
+الطاقم متعاون جدا,Staff Behavior,positive
+تعامل الموظفين ممتاز فعلا,Staff Behavior,positive
+الخدمة رائعة وواضحة,Staff Behavior,positive
+السعر مناسب لكن ليس رخيصا,Price,neutral
+الأسعار عادية مقارنة بالمكان,Price,neutral
+السعر لا بأس به لكن أعلى قليلا من المتوقع,Price,neutral
+الأسعار متوسطة إلى مرتفعة قليلا,Price,neutral
+السعر أعلى من القيمة المقدمة,Price,negative
+الأسعار مرتفعة أكثر من اللازم,Price,negative
+القيمة لا تبرر السعر,Price,negative
+السعر مناسب جدا مقارنة بالجودة,Price,positive
+الأسعار ممتازة فعلا,Price,positive
+القيمة مقابل السعر جيدة جدا,Price,positive
+الأكل يستحق المدح فعلا,Food Quality,positive
+الطعم جميل وواضح,Food Quality,positive
+الوجبة كانت شهية بشكل ملفت,Food Quality,positive
+الأكل ممتاز من أول لقمة,Food Quality,positive
+الطعام أفضل من كثير من المطاعم,Food Quality,positive
+الوجبة ليست سيئة لكنها عادية,Food Quality,neutral
+الطعم مقبول لكنه غير مميز,Food Quality,neutral
+الطعام دون المستوى المطلوب,Food Quality,negative
+الوجبة لم تعجبني أبدا,Food Quality,negative
+النكهة ضعيفة ومحبطة,Food Quality,negative
+الأكل أسوأ مما توقعت,Food Quality,negative
+الطعام لا يستحق الطلب مرة أخرى,Food Quality,negative
+المكان مرتب بشكل واضح,Cleanliness,positive
+النظافة مريحة للنفس,Cleanliness,positive
+المطعم نظيف من المدخل إلى الطاولة,Cleanliness,positive
+المكان يعطي انطباعا ممتازا من ناحية النظافة,Cleanliness,positive
+النظافة أفضل من المتوقع,Cleanliness,positive
+المكان مقبول لكنه يحتاج متابعة,Cleanliness,neutral
+النظافة ليست سيئة لكنها ليست مطمئنة,Cleanliness,neutral
+المكان غير مرتب بالشكل الكافي,Cleanliness,negative
+النظافة أضعف من المتوقع,Cleanliness,negative
+الطاولات تحتاج تنظيفا أفضل,Cleanliness,negative
+المكان يوحي بالإهمال,Cleanliness,negative
+النظافة غير مرضية بصراحة,Cleanliness,negative
+النظافه جيده,Cleanliness,positive
+تعامل الموظفين راق جدا,Staff Behavior,positive
+الخدمة كانت محترفة وواضحة,Staff Behavior,positive
+الموظف كان متفهما ومتعاونا,Staff Behavior,positive
+الطاقم تعامل معي باحترام كبير,Staff Behavior,positive
+الخدمة فاقت توقعاتي,Staff Behavior,positive
+الخدمة ليست سيئة لكنها عادية جدا,Staff Behavior,neutral
+التعامل مقبول لكنه بارد,Staff Behavior,neutral
+الموظف لم يكن متعاونا كما يجب,Staff Behavior,negative
+الخدمة سببت لي انزعاجا,Staff Behavior,negative
+أسلوب الموظفين غير مناسب,Staff Behavior,negative
+التعامل كان مستفزا,Staff Behavior,negative
+الطاقم لم يحترم طلبي,Staff Behavior,negative
+السعر مناسب للجودة المقدمة,Price,positive
+القيمة مقابل السعر ممتازة فعلا,Price,positive
+الأسعار مرضية جدا,Price,positive
+السعر كان أفضل مما توقعت,Price,positive
+الوجبة تستحق كل ريال,Price,positive
+السعر ليس رخيصا لكنه مقبول,Price,neutral
+الأسعار متوسطة بشكل عام,Price,neutral
+السعر أعلى من المفروض,Price,negative
+الأسعار غير مبررة,Price,negative
+دفعت أكثر مما تستحق الوجبة,Price,negative
+السعر مزعج مقارنة بالجودة,Price,negative
+القيمة أقل بكثير من السعر المطلوب,Price,negative

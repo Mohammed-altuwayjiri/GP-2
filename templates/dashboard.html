@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPINION.AI - Dashboard</title>
+
+    <!-- ✅ Static CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- ✅ Header -->
+    <div class="card dashboard-header">
+        <div class="dashboard-topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p id="user-info"></p>
+            </div>
+
+            <!-- ✅ Logout -->
+            <button class="btn-danger" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- ✅ Summary Section -->
+    <div class="summary-grid">
+
+        <div class="card summary-card">
+            <h2 class="section-title">Category Summary</h2>
+            <ul id="category-summary" class="summary-list"></ul>
+        </div>
+
+        <div class="card summary-card">
+            <h2 class="section-title">Opinion Distribution</h2>
+            <ul id="opinion-summary" class="summary-list"></ul>
+        </div>
+    </div>
+
+    <!-- ✅ Table -->
+    <div class="card table-card">
+        <h2>Analysis Results</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Review</th>
+                    <th>Category</th>
+                    <th>Opinion</th>
+                </tr>
+            </thead>
+            <tbody id="results-table"></tbody>
+        </table>
+
+        <a class="inline-link" href="review.html">Back to Review Page</a>
+    </div>
+
+</div>
+
+<!-- ✅ JavaScript -->
+<script>
+
+// ✅ Show logged in user
+document.getElementById("user-info").innerText =
+    "Logged in as: " + localStorage.getItem("userEmail");
+
+// ✅ Logout
+function logout() {
+    localStorage.clear();
+    window.location.href = "login.html";
+}
+
+
+// ✅ LOAD DATA FROM LAMBDA (IMPORTANT)
+function loadData() {
+    fetch("https://z1wqrbpzn8.execute-api.eu-north-1.amazonaws.com/results")
+        .then(res => res.json())
+        .then(data => {
+
+            // 👉 Expected structure:
+            // data.results
+            // data.category_summary
+            // data.opinion_distribution
+
+            // ✅ Fill category summary
+            const catList = document.getElementById("category-summary");
+            catList.innerHTML = "";
+            data.category_summary.forEach(row => {
+                catList.innerHTML += `
+                    <li>
+                        <span class="summary-key">${row.category}</span>
+                        <span class="summary-value">${row.total}</span>
+                    </li>
+                `;
+            });
+
+            // ✅ Fill opinion summary
+            const opList = document.getElementById("opinion-summary");
+            opList.innerHTML = "";
+            data.opinion_distribution.forEach(row => {
+                opList.innerHTML += `
+                    <li>
+                        <span class="summary-key">${row.opinion}</span>
+                        <span class="summary-value">${row.total}</span>
+                    </li>
+                `;
+            });
+
+            // ✅ Fill table
+            const table = document.getElementById("results-table");
+            table.innerHTML = "";
+            data.results.forEach(row => {
+                table.innerHTML += `
+                    <tr>
+                        <td>${row.review}</td>
+                        <td>${row.category}</td>
+                        <td>${row.opinion}</td>
+                    </tr>
+                `;
+            });
+
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+// ✅ Load on page load
+loadData();
+
+</script>
+
+</body>
+</html>

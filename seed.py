@@ -30,7 +30,7 @@ USERS = [
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 
-# Insert categories
+# Insert categories output
 for category in CATEGORIES:
     cursor.execute(
         "INSERT OR IGNORE INTO categories (name) VALUES (?)",

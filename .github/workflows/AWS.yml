@@ -1,10 +1,9 @@
-name: Deploy to AWS Lambda (OIDC)
+name: Deploy Frontend to S3
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
@@ -18,38 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # ✅ Setup Python
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      # ✅ Install dependencies
-      - name: Install dependencies
+      - name: Build preparation
         run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt -t .
-
-      # ✅ Zip everything
-      - name: Zip function
-        run: zip -r function.zip .
-
-      # ✅ Configure AWS credentials
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v3
-        with:
-          role-to-assume: arn:aws:iam::883425316561:role/GitHub-Lambda-Deploy-Role
-          aws-region: eu-north-1
-
-      # ✅ Upload to S3  
-      - name: Upload to S3
-        run: |
-          aws s3 cp function.zip s3://lambda-deploy-opinion-ai/function.zip
-
-      # ✅ Deploy from S3
-      - name: Deploy to AWS Lambda
-        run: |
-          aws lambda update-function-code \
-            --function-name opinion-ai-lambda \
-            --s3-bucket lambda-deploy-opinion-ai \
-            --s3-key function.zip
+          echo "Frontend deployment workflow"
+          ls -la

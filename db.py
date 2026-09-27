@@ -74,7 +74,7 @@ def get_category_id_by_name(category_name):
     return row["id"]
 
 
-# Analysis result storage
+# Analysis result storage- i am testing this branch
 def save_review_analysis(review_id, category_id, opinion):
     conn = get_db_connection()
     cursor = conn.cursor()

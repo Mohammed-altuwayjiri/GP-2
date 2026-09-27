@@ -1,4 +1,4 @@
-name: Deploy Frontend to S3
+name: Feedback analyzer CI/CD pipeline
 
 on:
   push:
@@ -15,9 +15,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Build preparation
-        run: |
-          echo "Frontend deployment workflow"
-          ls -la
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::166889922951:role/GitHub-ActionRole
+          aws-region: eu-north-1
+
+      - name: Verify AWS Login
+        run: aws sts get-caller-identity

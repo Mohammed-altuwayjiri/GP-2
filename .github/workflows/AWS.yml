@@ -36,6 +36,11 @@ jobs:
           mkdir package
           pip install -r requirements.txt -t package
 
+      - name: Check package size
+        run: |
+          du -sh package
+          du -sh package/* | sort -hr | head -20
+          
       - name: Copy project files
         run: |
           cp lambda_function.py package/

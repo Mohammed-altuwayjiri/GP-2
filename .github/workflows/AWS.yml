@@ -25,3 +25,12 @@ jobs:
 
       - name: Verify AWS Login
         run: aws sts get-caller-identity
+
+      - name: Create deployment package
+        run: zip -r lambda.zip .
+
+      - name: Deploy Lambda
+        run: |
+          aws lambda update-function-code \
+            --function-name feedback-analyzer \
+            --zip-file fileb://lambda.zip

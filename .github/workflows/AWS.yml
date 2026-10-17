@@ -42,8 +42,13 @@ jobs:
           cd package
           zip -r ../lambda.zip .
 
+      - name: Upload ZIP to S3
+        run: |
+          aws s3 cp lambda.zip s3://requirements-deploy/lambda.zip
+
       - name: Deploy Lambda
         run: |
           aws lambda update-function-code \
-            --function-name feedback-analyzer \
-            --zip-file fileb://lambda.zip
+          --function-name feedback-analyzer \
+          --s3-bucket requirements-deploy \
+          --s3-key lambda.zip

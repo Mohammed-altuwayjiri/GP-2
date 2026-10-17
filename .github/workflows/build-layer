@@ -1,0 +1,25 @@
+name: Build Lambda Layer
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-layer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create layer folder
+        run: |
+          mkdir python
+          pip install joblib==1.4.2 numpy==1.26.4 scikit-learn==1.5.2 -t python
+
+      - name: Zip layer
+        run: |
+          zip -r layer.zip python
+
+      - name: Upload Layer Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lambda-layer
+          path: layer.zip
+``

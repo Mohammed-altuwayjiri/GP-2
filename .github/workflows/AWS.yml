@@ -25,7 +25,12 @@ jobs:
 
       - name: Verify AWS Login
         run: aws sts get-caller-identity
-
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
       - name: Install dependencies
         run: |
           mkdir package

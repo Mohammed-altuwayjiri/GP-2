@@ -79,7 +79,7 @@ function sendReview(event) {
 
     const review = document.getElementById("text").value;
 
-    fetch("https://fxnma0l2c2.execute-api.eu-north-1.amazonaws.com", {
+    fetch("https://fxnma0l2c2.execute-api.eu-north-1.amazonaws.com/feedback", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

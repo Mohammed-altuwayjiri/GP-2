@@ -31,15 +31,16 @@ jobs:
           mkdir package
           pip install -r requirements.txt -t package
 
-      - name: Copy Project files
+      - name: Copy project files
         run: |
           cp *.py package/
-          
+          cp -r models package/
+
       - name: Create deployment package
-        run:  |
+        run: |
           cd package
           zip -r ../lambda.zip .
-          
+
       - name: Deploy Lambda
         run: |
           aws lambda update-function-code \

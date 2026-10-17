@@ -33,7 +33,8 @@ jobs:
 
       - name: Copy project files
         run: |
-          cp *.py package/
+          cp lambda_function.py package/
+          cp analysis.py package/
           cp -r models package/
 
       - name: Create deployment package

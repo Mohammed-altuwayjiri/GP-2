@@ -25,40 +25,114 @@ jobs:
 
       - name: Verify AWS Login
         run: aws sts get-caller-identity
-        
+
+      - name: Check Lambda runtime
+        run: |
+          RUNTIME=$(aws lambda get-function-configuration \
+            --function-name feedback-analyzer \
+            --query Runtime \
+            --output text)
+
+          echo "Lambda runtime: $RUNTIME"
+
+          if [ "$RUNTIME" != "python3.11" ]; then
+            echo "::error::Lambda runtime is $RUNTIME. Expected python3.11."
+            echo "Update the Lambda runtime before deploying."
+            exit 1
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          
+
       - name: Install dependencies
         run: |
+          rm -rf package
           mkdir package
-          pip install -r requirements.txt -t package
 
-      - name: Check package size
+          python -m pip install \
+          --no-cache-dir \
+          --only-binary=:all: \
+          --platform manylinux2014_x86_64 \
+          --implementation cp \
+          --python-version 3.11 \
+          --abi cp311 \
+          -r requirements.txt \
+          -t package
+
+      - name: Optimize Lambda package
         run: |
+          echo "Package size before cleanup:"
           du -sh package
-          du -sh package/* | sort -hr | head -20
-          
+
+          # Remove tests, benchmarks and caches
+          find package -type d \( \
+            -name tests -o \
+            -name test -o \
+            -name benchmarks -o \
+            -name _pycache_ \
+          \) -prune -exec rm -rf {} +
+
+          # Remove compiled Python cache files
+          find package -type f \( \
+            -name '*.pyc' -o \
+            -name '*.pyo' \
+          \) -delete
+
+          echo "Package size after cleanup:"
+          du -sh package
+
       - name: Copy project files
         run: |
           cp lambda_function.py package/
           cp analysis.py package/
           cp -r models package/
 
+      - name: Check final package size
+        run: |
+          PACKAGE_SIZE=$(du -sb package | cut -f1)
+          MAX_SIZE=$((240 * 1024 * 1024))
+
+          echo "Package size: $PACKAGE_SIZE bytes"
+          echo "Maximum allowed by workflow: $MAX_SIZE bytes"
+
+          if [ "$PACKAGE_SIZE" -ge "$MAX_SIZE" ]; then
+            echo "::error::Lambda package is still too large."
+            exit 1
+          fi
+
+          echo "Package size check passed."
+
       - name: Create deployment package
         run: |
           cd package
-          zip -r ../lambda.zip .
+          zip -q -r ../lambda.zip .
+
+      - name: Check ZIP size
+        run: |
+          du -sh lambda.zip
 
       - name: Upload ZIP to S3
         run: |
-          aws s3 cp lambda.zip s3://requirements-deploy/lambda.zip
+          aws s3 cp lambda.zip \
+            s3://requirements-deploy/lambda-${{ github.sha }}.zip
 
       - name: Deploy Lambda
         run: |
           aws lambda update-function-code \
-          --function-name feedback-analyzer \
-          --s3-bucket requirements-deploy \
-          --s3-key lambda.zip
+            --function-name feedback-analyzer \
+            --s3-bucket requirements-deploy \
+            --s3-key lambda-${{ github.sha }}.zip
+
+      - name: Wait for Lambda update
+        run: |
+          aws lambda wait function-updated \
+            --function-name feedback-analyzer
+
+      - name: Verify deployment
+        run: |
+          aws lambda get-function-configuration \
+            --function-name feedback-analyzer \
+            --query '{Runtime:Runtime,State:State,LastUpdateStatus:LastUpdateStatus,CodeSize:CodeSize}' \
+            --output json

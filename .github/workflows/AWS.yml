@@ -48,13 +48,18 @@ jobs:
 
       - name: Install dependencies
         run: |
-          mkdir -p package
+          rm -rf package
+          mkdir package
 
           python -m pip install \
-            --no-cache-dir \
-            --no-compile \
-            -r requirements.txt \
-            -t package
+          --no-cache-dir \
+          --only-binary=:all: \
+          --platform manylinux2014_x86_64 \
+          --implementation cp \
+          --python-version 3.11 \
+          --abi cp311 \
+          -r requirements.txt \
+          -t package
 
       - name: Optimize Lambda package
         run: |

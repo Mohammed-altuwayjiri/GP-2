@@ -27,7 +27,7 @@ def lambda_handler(event, context):
 
         # ✅ Save to DynamoDB
         table.put_item(Item={
-            "id": str(uuid.uuid4()),
+            "review_id": str(uuid.uuid4()),
             "review": review,
             "category": category,
             "opinion": opinion
